@@ -2,26 +2,159 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
+/*======================= Globals ================================ */
+.bg-landing {
+  background: #6441a5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #2a0845,
+    #6441a5
+  ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to left,
+    #2a0845,
+    #6441a5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: relative;
+  z-index: 1000;
+}
+
+.main {
+  @apply min-h-screen w-full relative text-white;
+}
+
+.section-layout {
+  @apply min-h-screen;
+}
+
+.overlay {
+  @apply absolute left-0 top-0 bg-black/60 w-full h-full z-[-1];
+}
+
+/*============================ Btns & Logo  ==================================*/
+.btn {
+  background: linear-gradient(
+    92.23deg,
+    #ff56f6 21.43%,
+    #b936ee 50.63%,
+    #3bace2 100%,
+    #406aff 117.04%
+  );
+  box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+}
+
+.btn:hover {
+  background: linear-gradient(
+    92.23deg,
+    #406aff 21.43%,
+    #3bace2 50.63%,
+    #b936ee 100%,
+    #ff56f6 117.04%
+  );
+}
+
+.active {
+  color: #fff;
+  padding: 1rem;
+  border-radius: 100%;
+}
+
+.gradient,
+.active {
+  background: linear-gradient(
+    92.23deg,
+    #406aff 21.43%,
+    #3bace2 50.63%,
+    #b936ee 100%,
+    #ff56f6 117.04%
+  );
+}
+
+.btn {
+  @apply rounded-full font-primary text-white font-medium;
+}
+.btn-sm {
+  @apply h-[46px] px-6 text-sm;
+}
+.btn-lg {
+  @apply h-[56px] px-10 text-base capitalize;
+}
+.btn-link {
+  @apply text-base;
+}
+.text-gradient {
+  @apply bg-gradient-to-r text-transparent bg-clip-text from-[#42A6E3] to-[#ff56f6] font-bold font-primary hover:from-[#FF56F6] hover:to-[#42A6E3];
+}
+
+.text-logo {
+  background: linear-gradient(
+    92.23deg,
+    #406aff 21.43%,
+    #3bace2 50.63%,
+    #b936ee 100%,
+    #ff56f6 117.04%
+  );
+  text-transform: uppercase;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/*========================== Home Page  ==========================*/
+.home {
+  @apply container mx-auto mt-12 min-h-[75vh];
+}
+
+/*================== About Page ================================ */
+.about {
+  @apply container mx-auto mt-12 min-h-screen pb-16;
+}
+
+.about-heading {
+  @apply text-red-400 mb-4 text-center w-full;
+}
+
+.about-container-box {
+  @apply grid grid-cols-1 lg:grid-cols-8 gap-16 w-full mt-16;
+}
+
+.about-container-box .col-1 {
+  @apply lg:col-span-3 flex flex-col items-start justify-start;
+}
+
+.about-container-box .col-1 > p {
+  @apply font-medium leading-8 text-center md:text-justify;
+}
+
+.about-container-box .col-1 > p:nth-of-type(2) {
+  @apply my-4;
+}
+
+.about-container-box .col-2 {
+  @apply hidden lg:block lg:col-span-3 relative h-max rounded-2xl border-2 border-solid border-black bg-slate-300 p-8;
+}
+
+.about-container-box .col-2 .img-about {
+  @apply w-full h-auto rounded-2xl aspect-auto;
+}
+
+.about-container-box .col-2 .overlay-img-about {
+  @apply absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-black;
+}
+
+.about-container-box .col-3 {
+  @apply lg:col-span-2 flex flex-col gap-y-4 md:gap-y-0 sm:flex-row lg:flex-col items-center justify-between;
+}
+
+.about-container-box .col-3 .sub-col-3 {
+  @apply flex flex-col items-center gap-y-2;
+}
+
+.about-container-box .col-3 .sub-col-3 span {
+  @apply inline-block text-3xl md:text-5xl lg:text-7xl font-bold;
+}
+
+.about-container-box .col-3 .sub-col-3 h2 {
+  @apply text-base lg:text-xl font-medium capitalize text-gray-400;
 }
