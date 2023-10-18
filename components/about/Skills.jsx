@@ -28,7 +28,7 @@ function Skills() {
           <motion.div
             whileHover={{ scale: 1.05 }}
             key={skill}
-            className="bg-white font-semibold text-center cursor-pointer col-span-1 text-black w-full py-2 px-4 h-12 flex items-center justify-center rounded-lg capitalize"
+            className="bg-black dark:bg-white font-semibold text-center cursor-pointer col-span-1 text-white dark:text-black w-full py-2 px-4 h-12 flex items-center justify-center rounded-lg capitalize"
           >
             {skill}
           </motion.div>

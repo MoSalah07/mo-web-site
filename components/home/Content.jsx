@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 // Icons
@@ -5,10 +6,11 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 import AnimatedText from "../animated/AnimatedText";
 
 function Content() {
+
   return (
-    <div className="flex flex-col justify-center items-center gap-6 col-span-2 ">
+    <div className="flex flex-col justify-center items-center gap-6 col-span-2">
       <AnimatedText text={`Mohamed Salah Web Developer`} />
-      <p className="text-white text-base md:text-lg] leading-10 sm:leading-8 text-left md:text-justify w-full sm:w-[80%]">
+      <p className="dark:text-white text-base md:text-lg] leading-10 sm:leading-8 text-left md:text-justify w-full sm:w-[80%]">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem maxime
         repudiandae perferendis repellat. Labore dolor aperiam illo rerum
         laborum nisi voluptates distinctio quos magnam! Molestiae ullam qui fuga

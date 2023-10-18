@@ -35,7 +35,7 @@ function AnimatedText({ text = "" }) {
       variants={quote}
       initial="initial"
       animate="animate"
-      className={`text-center text-xl sm:text-2xl md:text-4xl xl:text-[40px] font-semibold `}
+      className={`text-center  break-words text-xl sm:text-2xl md:text-4xl xl:text-[40px] font-semibold `}
     >
       {text.split(" ").map((word, index) => (
         <motion.span

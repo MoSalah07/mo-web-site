@@ -7,7 +7,7 @@ import MoSalahImg from "../../public/images/profile/mo-profile.webp";
 function HomeLanding() {
   return (
     <div className="grid grid-cols-1 gap-x-4 gap-y-12 lg:gap-y-0 lg:grid-cols-3">
-      <div className="hidden lg:block aspect-auto rounded-lg">
+      <div className="hidden lg:block aspect-auto rounded-lg mb-8">
         <Image
           src={MoSalahImg}
           alt="MoSalah"

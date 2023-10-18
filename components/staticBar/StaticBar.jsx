@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 
 function StaticBar() {
   return (
-    <div className="hidden sm:flex flex-col justify-between gap-6 absolute right-16 top-1/2 translate-y-[-50%] bg-white/10 p-4 rounded-lg">
+    <div className="hidden sm:flex flex-col justify-between gap-6 fixed z-50 right-8 top-1/2 translate-y-[-50%] bg-[#e0d5ca] dark:bg-[#281a42] p-4 rounded-lg">
       <motion.a href={`/`} whileHover={{ x: -2 }}>
         <TwitterIcon className={`w-6`} />
       </motion.a>

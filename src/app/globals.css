@@ -2,25 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/*============= Color =====================*/
+:root {
+  --text-light: #292f36;
+  --primary-bg-light: #f1efef;
+}
+
 /*======================= Globals ================================ */
 .bg-landing {
-  background: #6441a5; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to left,
-    #2a0845,
-    #6441a5
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to left,
-    #2a0845,
-    #6441a5
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  @apply relative z-[1000] bg-[var(--primary-bg-light)] dark:bg-gradient-to-l from-[#2a0845] to-[#6441a5];
+}
+
+.bg-landing-light {
   position: relative;
   z-index: 1000;
+  background-color: white;
 }
 
 .main {
-  @apply min-h-screen w-full relative text-white;
+  @apply min-h-screen w-full relative text-[var(--text-light)] dark:text-white;
 }
 
 .section-layout {
@@ -28,22 +28,29 @@
 }
 
 .overlay {
-  @apply absolute left-0 top-0 bg-black/60 w-full h-full z-[-1];
+  @apply absolute left-0 top-0 dark:bg-black/60 w-full h-full z-[-1];
+}
+
+/*================== Shapes  =================================*/
+.shape-img {
+  @apply absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-black;
 }
 
 /*============================ Btns & Logo  ==================================*/
 .btn {
-  background: linear-gradient(
+  /* background: linear-gradient(
     92.23deg,
     #ff56f6 21.43%,
     #b936ee 50.63%,
     #3bace2 100%,
     #406aff 117.04%
   );
-  box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+   */
+   box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+   @apply bg-black dark:bg-gradient-to-r dark:from-indigo-500 via-purple-500 dark:to-pink-500;
 }
 
-.btn:hover {
+/* .btn:hover {
   background: linear-gradient(
     92.23deg,
     #406aff 21.43%,
@@ -51,7 +58,7 @@
     #b936ee 100%,
     #ff56f6 117.04%
   );
-}
+} */
 
 .active {
   color: #fff;
@@ -112,7 +119,7 @@
 }
 
 .about-heading {
-  @apply text-red-400 mb-4 text-center w-full;
+  @apply mb-4 text-center w-full;
 }
 
 .about-container-box {
@@ -157,4 +164,39 @@
 
 .about-container-box .col-3 .sub-col-3 h2 {
   @apply text-base lg:text-xl font-medium capitalize text-gray-400;
+}
+
+/*================================ Projects  =============================*/
+
+.project-content-heading {
+  @apply py-16;
+}
+
+.project-container {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 xl:grid-cols-12 gap-24;
+}
+
+.project-container .col-1 {
+  @apply col-span-2 md:col-span-6 lg:col-span-8 xl:col-span-12;
+}
+.project-container .col-2,
+.project-container .col-3 {
+  @apply col-span-2 md:col-span-4  xl:col-span-6;
+}
+
+/*======================================== Articles =========================================*/
+.articles {
+  @apply container mx-auto mt-12 min-h-screen pb-16;
+}
+
+.articles .list {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-16 mt-16;
+}
+
+.articles .heading-articles {
+  @apply my-16 text-white;
+}
+
+.articles .heading-articles > h2 {
+  @apply font-bold text-4xl w-full text-center;
 }

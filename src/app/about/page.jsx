@@ -37,6 +37,7 @@ function AboutPage() {
             </p>
           </div>
           <div className="col-2">
+            {/* Shape Img */}
             <div className="overlay-img-about" />
             <Image
               src={MoImage}

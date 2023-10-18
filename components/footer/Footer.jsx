@@ -4,8 +4,8 @@ function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="h-[8vh] flex flex-col justify-center border-t-2 border-white">
-      <div className="container mx-auto capitalize flex items-center justify-between">
+    <footer className="h-[13vh] flex flex-col justify-center border-t-2 border-black dark:border-white">
+      <div className="container mx-auto capitalize flex flex-col md:flex-row gap-y-2 items-center justify-between">
         <div className="text-xl">
           {year}
           <span className="mx-2">&copy;</span>
