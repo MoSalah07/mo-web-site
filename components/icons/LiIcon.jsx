@@ -8,20 +8,28 @@ function LiIcon({ reference }) {
     offset: ["center end", "center center"],
   });
   return (
-    <figure ref={reference} className="absolute left-0 stroke-[#333]">
-      <svg className="rotate-[-165deg] md:-rotate-[100deg]" width={`75`} height={`75`} viewBox={`0 0 100 100`}>
+    <figure
+      ref={reference}
+      className="absolute left-0 stroke-[#333] dark:stroke-white"
+    >
+      <svg
+        className="rotate-[-165deg] md:-rotate-[100deg]"
+        width={`75`}
+        height={`75`}
+        viewBox={`0 0 100 100`}
+      >
         <circle
           cx={`75`}
           cy={`50`}
           r={`20`}
-          className=" stroke-purple-600 stroke-1 fill-none"
+          className=" stroke-purple-600 dark:stroke-[#58E6D9] stroke-1 fill-none"
         />
         <motion.circle
           cx={`75`}
           cy={`50`}
           r={`20`}
-                  className={`stroke-[5px] fill-gray-200`}
-                  style={{pathLength: scrollYProgress}}
+          className={`stroke-[5px] fill-gray-200`}
+          style={{ pathLength: scrollYProgress }}
         />
         <circle
           cx={`75`}

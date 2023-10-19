@@ -27,13 +27,13 @@ const Details = ({
           {position}&nbsp;
           <Link
             target={`_blank`}
-            className="text-purple-600"
+            className="text-purple-600 dark:text-[#58E6D9]"
             href={companyLink}
           >
             @{company}
           </Link>
         </h3>
-        <span className="capitalize font-medium text-gray-400">
+        <span className="capitalize font-medium text-gray-600 dark:text-gray-400 block my-2">
           {time} | {address}
         </span>
         <p className="font-medium w-full">{work}</p>

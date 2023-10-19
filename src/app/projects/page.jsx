@@ -19,10 +19,10 @@ function ProjectsPage() {
           {/* Col-1 */}
           <div className="col-1">
             <FeaturedProjects
-              title={`Crypto Screener Application`}
-              summary={`A Feature-rich Crypto Screener App useing React, Tailwind CSS, Context API, React Router And It Show detail regarding almost all the cryptocurrency, You can easily convert the price in your local currency`}
-              link={`/`}
-              github={`/`}
+              title={`Countries_app`}
+              summary={`A Feature-rich Countries App useing React, Tailwind CSS, Context API, React Router And It Show detail regarding almost all the cryptocurrency, You can easily convert the price in your local currency`}
+              link={`https://countries-app-pink.vercel.app/`}
+              github={`https://github.com/MoSalah07/countries_app`}
               type={`Featured Project`}
               img={InvoiceApp}
             />

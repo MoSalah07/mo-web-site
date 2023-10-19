@@ -33,7 +33,7 @@
 
 /*================== Shapes  =================================*/
 .shape-img {
-  @apply absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-black;
+  @apply absolute top-[-3px] -right-2 md:-right-[15px] -z-10 w-[102%] h-[102%] md:h-[104%] rounded-[2rem] bg-black dark:bg-[#E8E8E8];
 }
 
 /*============================ Btns & Logo  ==================================*/
@@ -147,7 +147,7 @@
 }
 
 .about-container-box .col-2 .overlay-img-about {
-  @apply absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-black;
+  @apply absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-black dark:bg-[#E8E8E8];
 }
 
 .about-container-box .col-3 {

@@ -1,4 +1,5 @@
 import HireMe from "../../components/HireMe/HireMe";
+import SectionProvider from "../../components/SectionProvider";
 import Footer from "../../components/footer/Footer";
 import Nav from "../../components/nav/Nav";
 import StaticBar from "../../components/staticBar/StaticBar";
@@ -22,13 +23,14 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <main className="bg-landing main">
           <div className="overlay" />
-          <section className="relative z-50 section-layout">
+          <SectionProvider className={`relative z-50 section-layout`}>
+            {" "}
             <Nav />
             <StaticBar />
             <HireMe />
             {children}
             <Footer />
-          </section>
+          </SectionProvider>
         </main>
       </body>
     </html>

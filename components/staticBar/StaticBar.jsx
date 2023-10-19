@@ -17,10 +17,18 @@ function StaticBar() {
       <motion.a href={`/`} whileHover={{ x: -2 }}>
         <TwitterIcon className={`w-6`} />
       </motion.a>
-      <motion.a href={`/`} whileHover={{ x: -2 }}>
+      <motion.a
+        href={`https://www.linkedin.com/in/mohamed-salah-957284282/?trk=public-profile-join-page`}
+        target={`_blank`}
+        whileHover={{ x: -2 }}
+      >
         <LinkedInIcon />
       </motion.a>
-      <motion.a href={`/`} whileHover={{ x: -2 }}>
+      <motion.a
+        href={`https://github.com/MoSalah07`}
+        target={`_blank`}
+        whileHover={{ x: -2 }}
+      >
         <GithubIcon />
       </motion.a>
       <motion.a

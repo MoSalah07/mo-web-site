@@ -9,7 +9,7 @@ const FramerImg = motion(Image);
 
 function Project({ title, type, img = "", link = "/", github = "/" }) {
   return (
-    <article className="w-full flex flex-col items-center justify-center rounded-2xl border broder-solid border-[#333] bg-gray-200 p-6 relative">
+    <article className="w-full flex flex-col items-center justify-center rounded-2xl border broder-solid border-[#333] dark:border-white bg-gray-200 dark:bg-[#201234] p-6 relative">
       <Link
         href={link}
         target={`_blank`}
@@ -24,13 +24,15 @@ function Project({ title, type, img = "", link = "/", github = "/" }) {
         />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-purple-600 font-medium text-xl">{type}</span>
+        <span className="text-[#B63E96] dark:text-[#3EC3B4] font-medium text-xl">
+          {type}
+        </span>
         <Link
           href={link}
           target={`_blank`}
-          className="hover:underline underline-offset-1 text-[#333]"
+          className="hover:underline underline-offset-1 text-black dark:text-white"
         >
-          <h2 className="my-2 text-[#333] w-full text-left text-xl md:text-3xl font-bold">
+          <h2 className="my-2 text-black dark:text-white w-full text-left text-xl md:text-3xl font-bold">
             {title}
           </h2>
         </Link>
@@ -38,11 +40,15 @@ function Project({ title, type, img = "", link = "/", github = "/" }) {
           <Link
             href={link}
             target={`_blank`}
-            className="text-[#333] text-lg font-semibold underline"
+            className="text-black dark:text-white text-lg font-semibold underline"
           >
             Visit
           </Link>
-          <Link href={github} target={`_blank`} className="w-8 text-[#333]">
+          <Link
+            href={github}
+            target={`_blank`}
+            className="w-8 text-black dark:text-white"
+          >
             <GithubIcon />
           </Link>
         </div>
