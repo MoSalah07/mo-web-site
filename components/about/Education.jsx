@@ -42,7 +42,7 @@ function Education() {
         {/* Shape */}
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-4 md:left-8 top-0 w-[4px] h-full bg-black origin-top dark:bg-[#160925]"
+          className="absolute left-4 md:left-8 top-0 w-[4px] h-full bg-black origin-top dark:bg-[#58E6D9]"
         />
         <ul>
           <Details

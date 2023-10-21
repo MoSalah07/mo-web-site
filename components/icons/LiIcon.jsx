@@ -13,7 +13,7 @@ function LiIcon({ reference }) {
       className="absolute left-0 stroke-[#333] dark:stroke-white"
     >
       <svg
-        className="rotate-[-165deg] md:-rotate-[100deg]"
+        className="rotate-[-110deg] md:rotate-[80deg] w-[40px] h-[40px]  md:w-[60px] md:h-[60px]"
         width={`75`}
         height={`75`}
         viewBox={`0 0 100 100`}
@@ -28,14 +28,14 @@ function LiIcon({ reference }) {
           cx={`75`}
           cy={`50`}
           r={`20`}
-          className={`stroke-[5px] fill-gray-200`}
+          className={`stroke-[5px] fill-gray-200 dark:fill-black`}
           style={{ pathLength: scrollYProgress }}
         />
         <circle
           cx={`75`}
           cy={`50`}
           r={`10`}
-          className="stroke-1 fill-purple-700 animate-pulse"
+          className="stroke-1 fill-purple-700 dark:fill-[#58E6D9] animate-pulse"
         />
       </svg>
     </figure>

@@ -22,8 +22,9 @@ const Details = ({
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
+        className="ml-[40px] sm:ml-0 "
       >
-        <h3 className="capitalize font-bold text-2xl">
+        <h3 className="capitalize font-bold text-lg md:text-2xl">
           {position}&nbsp;
           <Link
             target={`_blank`}
@@ -33,10 +34,10 @@ const Details = ({
             @{company}
           </Link>
         </h3>
-        <span className="capitalize font-medium text-gray-600 dark:text-gray-400 block my-2">
+        <span className="capitalize font-bold md:font-medium text-sm md:text-lg text-gray-600 dark:text-gray-400 block my-2">
           {time} | {address}
         </span>
-        <p className="font-medium w-full">{work}</p>
+        <p className="font-medium w-full leading-8">{work}</p>
       </motion.div>
     </li>
   );
@@ -58,7 +59,7 @@ function Experience() {
         {/* Shape */}
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-4 md:left-8 top-0 w-[4px] h-full bg-black origin-top"
+          className="absolute left-4 md:left-8 top-0 w-[4px] h-full bg-black dark:bg-[#58E6D9] origin-top"
         />
         <ul>
           <Details

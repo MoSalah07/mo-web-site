@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 // Components
 import LinksMobile from "./LinksMobile";
+// Framer Motion
+import { motion } from "framer-motion";
 
 // Custom LinkMobile
 const MobileLinks = ({ href, pathname, title }) => {
@@ -40,7 +42,11 @@ function NavMobile({ mode, setMode, setIsOpen }) {
   }, [window]);
 
   return (
-    <nav className="flex flex-col py-4 sm:hidden fixed z-50 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#BFBFBF] text-black w-[90%] h-1/2 backdrop-blur-md">
+    <motion.nav
+      initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
+      animate={{ scale: 1, opacity: 1 }}
+      className="flex flex-col py-4 sm:hidden fixed z-50 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#BFBFBF] text-black w-[90%] h-1/2 backdrop-blur-md"
+    >
       <ul className="flex flex-col items-center gap-6 mt-6">
         <MobileLinks
           mode={mode}
@@ -73,7 +79,7 @@ function NavMobile({ mode, setMode, setIsOpen }) {
       </ul>
       {/* Icons Mobile */}
       <LinksMobile mode={mode} setMode={setMode} />
-    </nav>
+    </motion.nav>
   );
 }
 

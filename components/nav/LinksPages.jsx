@@ -29,8 +29,8 @@ function LinksPages({ mode, setMode }) {
         pathname={pathname}
       />
       <CustomeLinksPages
-        href={`/skills`}
-        title={`Skills`}
+        href={`/articles`}
+        title={`Articles`}
         pathname={pathname}
       />
       <button

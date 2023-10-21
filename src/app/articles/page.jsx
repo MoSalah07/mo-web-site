@@ -6,7 +6,7 @@ import ArticleImg2 from "../../../public/images/articles/create modal component 
 import ArticleImg3 from "../../../public/images/articles/form validation in reactjs using custom react hook.png";
 import Article from "../../../components/articles/Article";
 
-function SkillsPage() {
+function ArticlesPage() {
   return (
     <>
       <title>Articles Page</title>
@@ -80,4 +80,4 @@ function SkillsPage() {
   );
 }
 
-export default SkillsPage;
+export default ArticlesPage;

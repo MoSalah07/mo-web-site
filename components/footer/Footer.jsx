@@ -13,7 +13,7 @@ function Footer() {
         </div>
 
         <div className="capitalize text-xl">
-          built with <span className="text-green-500">♡</span> by{" "}
+          built with <span className="text-accent dark:text-[#58E6D9]">♡</span> by{" "}
           <span className="text-xl underline underline-offset-2">MoSalah</span>
         </div>
       </div>

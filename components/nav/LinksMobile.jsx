@@ -23,14 +23,14 @@ function LinksMobile({ mode, setMode }) {
         target={`_blank`}
         whileHover={{ y: -2 }}
       >
-        <LinkedInIcon className={`w-[35px] h-[35px]`}  />
+        <LinkedInIcon className={`w-[35px] h-[35px]`} />
       </motion.a>
       <motion.a
         href={`https://github.com/MoSalah07`}
         target={`_blank`}
         whileHover={{ y: -2 }}
       >
-        <GithubIcon className={`w-[35px] h-[35px]`}  />
+        <GithubIcon className={`w-[35px] h-[35px]`} />
       </motion.a>
       <motion.a
         href={`https://www.facebook.com/mido.mohammed.7`}
